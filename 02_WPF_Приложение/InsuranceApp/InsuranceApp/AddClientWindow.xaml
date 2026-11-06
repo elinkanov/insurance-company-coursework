@@ -1,0 +1,81 @@
+﻿<Window x:Class="InsuranceApp.AddClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавление клиента" Height="700" Width="450" 
+        WindowStartupLocation="CenterOwner" WindowStyle="None" 
+        AllowsTransparency="True" Background="Transparent">
+
+    <Border Background="#FFFFFF" CornerRadius="16" Margin="20" 
+            MouseLeftButtonDown="Window_MouseLeftButtonDown">
+        <Border.Effect>
+            <DropShadowEffect Color="#059669" Opacity="0.15" BlurRadius="40" ShadowDepth="10"/>
+        </Border.Effect>
+
+        <Grid>
+            <Button Click="BtnClose_Click" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" 
+                    Margin="0,15,15,0" Background="Transparent" BorderThickness="0" Cursor="Hand">
+                <TextBlock Text="✕" Foreground="#9CA3AF" FontSize="16" FontWeight="Bold"/>
+            </Button>
+
+            <StackPanel Margin="40,30,40,20">
+                <TextBlock Text="Новый клиент" FontSize="24" FontWeight="Bold" Foreground="#111827" Margin="0,0,0,20"/>
+
+                <TextBlock Text="Фамилия" Foreground="#374151" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                <Border Background="#FFC9E4C1" CornerRadius="8" Margin="0,0,0,10" Padding="15,0,15,0">
+                    <TextBox x:Name="TbFamiliya" Height="35" BorderThickness="0" Background="Transparent" VerticalContentAlignment="Center"/>
+                </Border>
+
+                <TextBlock Text="Имя" Foreground="#374151" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                <Border Background="#FFC9E4C1" CornerRadius="8" Margin="0,0,0,10" Padding="15,0,15,0">
+                    <TextBox x:Name="TbImya" Height="35" BorderThickness="0" Background="Transparent" VerticalContentAlignment="Center"/>
+                </Border>
+
+                <TextBlock Text="Отчество" Foreground="#374151" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                <Border Background="#FFC9E4C1" CornerRadius="8" Margin="0,0,0,10" Padding="15,0,15,0">
+                    <TextBox x:Name="TbOtchestvo" Height="35" BorderThickness="0" Background="Transparent" VerticalContentAlignment="Center"/>
+                </Border>
+
+                <TextBlock Text="Дата рождения (ГГГГ-ММ-ДД)" Foreground="#374151" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                <Border Background="#FFC9E4C1" CornerRadius="8" Margin="0,0,0,10" Padding="15,0,15,0">
+                    <TextBox x:Name="TbData" Height="35" BorderThickness="0" Background="Transparent" VerticalContentAlignment="Center"/>
+                </Border>
+
+                <TextBlock Text="Паспорт (серия и номер)" Foreground="#374151" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                <Border Background="#FFC9E4C1" CornerRadius="8" Margin="0,0,0,10" Padding="15,0,15,0">
+                    <TextBox x:Name="TbPasport" Height="35" BorderThickness="0" Background="Transparent" VerticalContentAlignment="Center"/>
+                </Border>
+
+                <TextBlock Text="Адрес" Foreground="#374151" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                <Border Background="#FFC9E4C1" CornerRadius="8" Margin="0,0,0,10" Padding="15,0,15,0">
+                    <TextBox x:Name="TbAdres" Height="35" BorderThickness="0" Background="Transparent" VerticalContentAlignment="Center"/>
+                </Border>
+
+                <TextBlock Text="Телефон" Foreground="#374151" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                <Border Background="#FFC9E4C1" CornerRadius="8" Margin="0,0,0,20" Padding="15,0,15,0">
+                    <TextBox x:Name="TbTelefon" Height="35" BorderThickness="0" Background="Transparent" VerticalContentAlignment="Center"/>
+                </Border>
+
+                <Button Click="BtnSave_Click" Height="45" Background="#059669" Foreground="White" FontWeight="Bold" FontSize="16" BorderThickness="0" Cursor="Hand">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#047857"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="Сохранить" />
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

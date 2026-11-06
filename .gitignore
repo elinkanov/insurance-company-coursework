@@ -1,0 +1,27 @@
+# Visual Studio / .NET
+.vs/
+**/bin/
+**/obj/
+*.user
+*.suo
+*.pdb
+
+# Local settings and secrets
+*.local.json
+*.userprefs
+
+# Temporary Office files
+~$*
+
+# NuGet package cache
+**/packages/*
+!**/packages/packages.config
+
+# Local database files
+*.mdf
+*.ldf
+*.ndf
+
+# Video editor temporary files
+*.tmp
+*.bak
